@@ -39,7 +39,7 @@ IONBURST_KEY=********************************                       // Password 
   }
 }
 ```
-- /.ionburst/credentials.ini in home directory
+- /.ionburst/credentials in home directory
 ```sh
 [test]                                                                // Profile name
 ionburst_id=******************                                        // Username
