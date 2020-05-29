@@ -1,0 +1,31 @@
+{
+  "name": "ionburst-sdk",
+  "version": "0.9.6",
+  "description": "ionburst node.js sdk",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionburstlimited/ionburst-sdk-javascript.git"
+  },
+  "keywords": [
+    "ionburst",
+    "node",
+    "npm"
+  ],
+  "author": "Costin Botez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionburstlimited/ionburst-sdk-javascript/issues"
+  },
+  "homepage": "https://github.com/ionburstlimited/ionburst-sdk-javascript#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "ini": "^1.3.5",
+    "path": "^0.12.7"
+  }
+}
