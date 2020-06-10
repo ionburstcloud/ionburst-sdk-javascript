@@ -16,6 +16,10 @@
     "npm"
   ],
   "author": "Ionburst Limited",
+  "contributors": [
+    "Costin Botez",
+    "Josh Fraser <1416487-jishf@users.noreply.gitlab.com>"
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://gitlab.com/ionburst/ionburst-sdk-javascript/-/issues"
