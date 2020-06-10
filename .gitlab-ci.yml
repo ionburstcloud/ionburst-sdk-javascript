@@ -1,0 +1,20 @@
+image: $IMAGE
+
+stages:
+  - dry-run
+  - publish
+
+dry-run:
+ stage: dry-run
+ script:
+  - 'semantic-release -d -e @semantic-release/gitlab'
+ only:
+  - master
+
+publish:
+ stage: publish
+ script:
+  - 'semantic-release -e @semantic-release/gitlab'
+ only:
+  - master
+ when: manual
