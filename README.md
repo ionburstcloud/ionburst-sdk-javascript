@@ -12,7 +12,7 @@ The **Ionburst SDK for JavaScript** enables JavaScript developers to easily work
 ### Installation
 
 ```sh
-npm install ionburst-sdk
+npm i ionburst-sdk-javascript
 ```
 
 ### Configuration
