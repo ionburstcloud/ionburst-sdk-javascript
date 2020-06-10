@@ -7,57 +7,53 @@ The **Ionburst SDK for JavaScript** enables JavaScript developers to easily work
 * [Issues][sdk-issues]
 * [SDK Samples](https://docs.ionburst.io/#/sdk?id=usage)
 
-## Getting Help
+## Getting Started
 
-Please use the following community resources to get help. We use [Gitlab issues][sdk-issues] to track bugs and feature requests.
-
-* Join the Ionburst JavaScript chat on [gitter](https://gitter.im/ionburstlimited/community)
-* Get in touch with [Ionburst Support](https://docs.ionburst.io/#/introduction?id=contact-amp-support)
-* If it turns out that you may have found a bug, please open an [issue][sdk-issues]
-
-### How to use
-
-* Install
+### Installation
 
 ```sh
 npm install ionburst-sdk
 ```
 
-* Configuration
-Ionburst sdk gets it's configurations(ionburst_id, ionburst_key, ionburst_uri) from these 3 files.
-If ionburst_id and ionburst_key are not specified in .env file, it'll get them from credentials file with information from config.json
-If ionburst_uri is not specified in Ionburst constructor, it'll first check config.json, and then credentials file.
+### Configuration
 
-- .env file
+The Ionburst SDK can get its configuration (ionburst_id, ionburst_key, ionburst_uri) from the following three files.
+
+If `ionburst_id` and `ionburst_key` are not specified by environment variable, they are obbtained from the credentials file with information from the `config.json` file.
+
+If `ionburst_uri` is not specified in Ionburst constructor, it'll first check `config.json`, and then the credentials file.
+
+#### Environment Variables
 
 ```sh
-IONBURST_ID=******************                                      // UserName of Ionburst account
-IONBURST_KEY=********************************                       // Password of Ionburst account
+IONBURST_ID=IB******************
+IONBURST_KEY=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
 ```
 
-- config.json file in root directory
+#### config.json file
 
-```sh
+```json
 {
   "Ionburst": {
-    "Profile": "test",                                                // Profile name to search in credentials file, Required for credentials file
-    "ProfilesLocation": "...",                                        // Not Required, the location of credetials file which has profile information
-    "IonBurstUri": "https://api.example.ionburst.io/",                // Server URI
-    "TraceCredentialsFile": "OFF",                                    // If "ON", it shows log for processing credential file
+    "Profile": "test",
+    "IonBurstUri": "https://api.example.ionburst.io/",
+    "TraceCredentialsFile": "OFF",
   }
 }
 ```
 
-- /.ionburst/credentials in home directory
+#### Credentials file
 
 ```sh
-[test]                                                                // Profile name
-ionburst_id=******************                                        // Username
-ionburst_key=********************************                         // Password
-ionburst_uri=https://api.example.ionburst.io/                         // Not Required, Server URI
+[example]
+ionburst_id=IB******************
+ionburst_key=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
+ionburst_uri=https://api.example.ionburst.io/
 ```
 
-* Initialize
+### Usage
+
+#### Initialise
 
 ```sh
 const Ionburst = require('ionburst-sdk')
@@ -71,7 +67,8 @@ const Ionburst = require('ionburst-sdk')
 var ionburst = Ionburst("https://api.example.ionburst.io/");
 ```
 
-* Upload Data
+#### Upload Data
+
 With Callback:
 
 ```sh
@@ -94,7 +91,7 @@ let data = await ionburst.putAsync({
 });
 ```
 
-* Download Data
+#### Download Data
 
 With Callback:
 
@@ -110,7 +107,8 @@ With async/await:
 let data = await ionburst.getAsync(id);
 ```
 
-* Delete Data
+#### Delete Data
+
 With Callback:
 
 ```sh
@@ -125,7 +123,8 @@ With async/await:
 let data = await ionburst.deleteAsync(id);
 ```
 
-* Upload Data Deferred
+#### Upload Data Deferred
+
 With Callback:
 
 ```sh
@@ -150,7 +149,8 @@ let token = await ionburst.startDeferredActionAsync({
 });
 ```
 
-* Download Data Deferred
+#### Download Data Deferred
+
 With Callback:
 
 ```sh
@@ -171,7 +171,8 @@ let token = await ionburst.startDeferredActionAsync({
 });
 ```
 
-* Check Data Deferred
+#### Check Data Deferred
+
 With Callback:
 
 ```sh
@@ -187,7 +188,8 @@ With async/await:
 let result = await ionburst.fetch(token);
 ```
 
-* Fetch Data Deferred
+#### Fetch Data Deferred
+
 With Callback:
 
 ```sh
@@ -202,7 +204,8 @@ With async/await:
 let result = await ionburst.fetchAsync(token);
 ```
 
-* Get Classifcations
+#### Get Classifcations
+
 With Callback:
 
 ```sh
@@ -217,6 +220,14 @@ With async/await:
 let data = await ionburst.getClassificationsAsync();
 ```
 
+## Getting Help
+
+Please use the following community resources to get help. We use [Gitlab issues][sdk-issues] to track bugs and feature requests.
+
+* Join the Ionburst JavaScript chat on [gitter](https://gitter.im/ionburstlimited/community)
+* Get in touch with [Ionburst Support](https://docs.ionburst.io/#/introduction?id=contact-amp-support)
+* If you have found a bug, please open an [issue][sdk-issues]
+
 ### Opening Issues
 
 If you find a bug, or have an issue with the Ionburst SDK for JavaScript we would like to hear about it. Check the existing [issues][sdk-issues] and try to make sure your problem doesn’t already exist before opening a new issue. It’s helpful if you include the version of Ionburst SDK JavaScript and the OS you’re using. Please include a stack trace and reduced repro case when appropriate, too.
@@ -225,18 +236,16 @@ The [Gitlab issues][sdk-issues] are intended for bug reports and feature request
 
 ## SDK Change Log
 
-The change log for the SDK can be found in the Github Releases [page](https://gitlab.com/ionburst/ionburst-sdk-javascript/-/releases)
+The change log for the SDK can be found in the Gitlab Releases [page](https://gitlab.com/ionburst/ionburst-sdk-javascript/-/releases)
 
-## Tests
+## Dependencies
 
-### Dependencies
+* [axios](https://www.npmjs.com/package/axios)
+* [dotenv](https://www.npmjs.com/package/dotenv)
+* [fs](https://www.npmjs.com/package/fs)
+* [ini](https://www.npmjs.com/package/ini)
+* [path](https://www.npmjs.com/package/path)
 
-*  [axios](https://www.npmjs.com/package/axios),
-*  [dotenv](https://www.npmjs.com/package/dotenv),
-*  [fs](https://www.npmjs.com/package/fs),
-*  [ini](https://www.npmjs.com/package/ini),
-*  [path](https://www.npmjs.com/package/path)
-	
 [ionburst]: https://ionburst.io
 [sdk-website]: https://docs.ionburst.io/#/sdk
 [sdk-source]: https://gitlab.com/ionburst/ionburst-sdk-javascript
