@@ -18,7 +18,22 @@ version:
     paths:
       - build_info
 
-publish:
+publish_develop:
+ stage: publish
+ script:
+  - '. build_info'
+  - 'echo New version is: $RELEASE_VERSION'
+  - export PREVIOUS_VERSION=$(jq -r '.version' package.json)
+  - 'echo Previous version in package.json: $PREVIOUS_VERSION'
+  - 'sed -i s/$PREVIOUS_VERSION/$RELEASE_VERSION/g package.json'
+  - 'release changelog'
+  - 'release commit-and-tag CHANGELOG.md build_info package.json'
+  - 'npm-publish --token=$NPM_TOKEN --tag next'
+ only:
+  - develop
+ when: manual
+
+publish_main:
  stage: publish
  script:
   - '. build_info'
@@ -30,6 +45,5 @@ publish:
   - 'release commit-and-tag CHANGELOG.md build_info package.json'
   - 'npm-publish --token=$NPM_TOKEN'
  only:
-  - develop
   - main
  when: manual
