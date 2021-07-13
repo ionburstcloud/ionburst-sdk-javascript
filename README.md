@@ -1,4 +1,9 @@
-# Ionburst SDK for JavaScript [![Gitter](https://badges.gitter.im/ionburstlimited/community.svg)](https://gitter.im/ionburstlimited/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+![npm](https://img.shields.io/npm/v/ionburst-sdk-javascript?color=fb6a26&style=flat-square)
+![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/ionburst-sdk-javascript?color=fb6a26&style=flat-square)
+![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/ionburst/ionburst-sdk-javascript/main?color=fb6a26&style=flat-square)
+[![slack](https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack&logoColor=white)](https://join.slack.com/t/ionburst-cloud/shared_invite/zt-panjkslf-Z5DOpU1OOeNPkXgklD~Cpg)
+
+# Ionburst SDK for JavaScript 
 
 The **Ionburst SDK for Javascript** enables developers to easily integrate with [Ionburst Cloud][ionburst-cloud], building in ultra-secure and private object storage to their applications.
 
@@ -36,7 +41,7 @@ IONBURST_KEY=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
 {
   "Ionburst": {
     "Profile": "test",
-    "IonburstUri": "https://api.example.ionburst.io/",
+    "IonburstUri": "https://api.example.ionburst.cloud/",
     "TraceCredentialsFile": "OFF"
   }
 }
@@ -48,7 +53,7 @@ IONBURST_KEY=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
 [example]
 ionburst_id=IB******************
 ionburst_key=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
-ionburst_uri=https://api.example.ionburst.io/
+ionburst_uri=https://api.example.ionburst.cloud/
 ```
 
 ### Usage
@@ -64,7 +69,7 @@ or
 
 ```sh
 const Ionburst = require('ionburst-sdk')
-var ionburst = Ionburst("https://api.example.ionburst.io/");
+var ionburst = Ionburst("https://api.example.ionburst.cloud/");
 ```
 
 #### Upload Data
@@ -224,13 +229,13 @@ let data = await ionburst.getClassificationsAsync();
 
 Please use the following community resources to get help. We use [Gitlab issues][sdk-issues] to track bugs and feature requests.
 
-* Join the Ionburst JavaScript chat on [gitter](https://gitter.im/ionburstlimited/community)
+* Join the Ionburst Cloud community on [Slack](https://join.slack.com/t/ionburst-cloud/shared_invite/zt-panjkslf-Z5DOpU1OOeNPkXgklD~Cpg)
 * Get in touch with [Ionburst Support](https://ionburst.cloud/contact)
 * If you have found a bug, please open an [issue][sdk-issues]
 
 ### Opening Issues
 
-If you find a bug, or have an issue with the Ionburst SDK for JavaScript we would like to hear about it. Check the existing [issues][sdk-issues] and try to make sure your problem doesn’t already exist before opening a new issue. It’s helpful if you include the version of Ionburst SDK JavaScript and the OS you’re using. Please include a stack trace and reduced repro case when appropriate, too.
+If you find a bug, or have an issue with the Ionburst SDK for JavaScript we would like to hear about it. Check the existing [issues][sdk-issues] and try to make sure your problem doesn’t already exist before opening a new issue. It’s helpful if you include the version of Ionburst SDK JavaScript and the OS you’re using. Please include a stack trace and steps to reproduce the issue.
 
 The [Gitlab issues][sdk-issues] are intended for bug reports and feature requests. For help and questions with using the Ionburst SDK for JavaScript please make use of the resources listed in the Getting Help section. There are limited resources available for handling issues and by keeping the list of open issues clean we can respond in a timely manner.
 
@@ -255,5 +260,5 @@ A massive thanks to [Costin Botez](https://github.com/costibotez) for developing
 [sdk-website]: https://ionburst.cloud/docs/sdk/
 [sdk-source]: https://gitlab.com/ionburst/ionburst-sdk-javascript
 [sdk-issues]: https://gitlab.com/ionburst/ionburst-sdk-javascript/issues
-[sdk-license]: https://gitlab.com/ionburst/ionburst-sdk-javascript/-/blob/master/LICENSE
+[sdk-license]: https://gitlab.com/ionburst/ionburst-sdk-javascript/-/blob/main/LICENSE
 [docs-api]: https://ionburst.cloud/docs/api/
