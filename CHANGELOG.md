@@ -2,6 +2,15 @@
 
 <!--- next entry here -->
 
+## 1.0.7
+2021-07-14
+
+### Fixes
+
+- add previous releases to CHANGELOG (ed022b96691b4add64ce27c02d652e850006208e)
+- update README (66af540882c3e487829b0d4bf32a6eb68c62c142)
+- more minor doc updates (08197059fb1f1c8790aafb3e29d5020f8d6235a6)
+
 ## 1.0.7-develop.1
 2021-07-13
 
