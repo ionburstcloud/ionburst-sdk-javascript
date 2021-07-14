@@ -1,6 +1,6 @@
 {
   "name": "ionburst-sdk-javascript",
-  "version": "1.0.6",
+  "version": "1.0.7-develop.1",
   "description": "Ionburst SDK for Node.js",
   "main": "lib/index.js",
   "scripts": {
