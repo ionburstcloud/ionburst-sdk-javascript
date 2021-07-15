@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 1.1.0-develop.1
+2021-07-15
+
+### Features
+
+- add support for secrets API (b29da059c98bd58a09bcbda15b8dfb25fcd917a6)
+
 ## 1.0.7
 2021-07-14
 
