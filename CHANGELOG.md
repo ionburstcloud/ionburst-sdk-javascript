@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 1.1.1-develop.1
+2022-03-23
+
+### Fixes
+
+- change settings method for getting root directory (1b3a490b2cef08a46871c37a8be932f7ccad2d42)
+
 ## 1.1.0
 2021-07-16
 
