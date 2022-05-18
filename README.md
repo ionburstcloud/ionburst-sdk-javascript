@@ -49,7 +49,7 @@ IONBURST_KEY=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
 
 #### Credentials file
 
-```sh
+```ini
 [example]
 ionburst_id=IB******************
 ionburst_key=eW91aGF2ZXRvb211Y2h0aW1lb255b3VyaGFuZHMh
@@ -60,14 +60,14 @@ ionburst_uri=https://api.example.ionburst.cloud/
 
 #### Initialise
 
-```sh
+```javascript
 const Ionburst = require('ionburst-sdk')
 var ionburst = Ionburst();
 ```
 
 or
 
-```sh
+```javascript
 const Ionburst = require('ionburst-sdk')
 var ionburst = Ionburst("https://api.example.ionburst.cloud/");
 ```
@@ -76,7 +76,7 @@ var ionburst = Ionburst("https://api.example.ionburst.cloud/");
 
 With Callback:
 
-```sh
+```javascript
 ionburst.put({
   id: '...',
   data: '...',
@@ -88,7 +88,7 @@ ionburst.put({
 
 With async/await:
 
-```sh
+```javascript
 let data = await ionburst.putAsync({
   id: '...',
   data: '...',
@@ -100,7 +100,7 @@ let data = await ionburst.putAsync({
 
 With Callback:
 
-```sh
+```javascript
 ionburst.get(id, function(err, data) {
   ...
 });
@@ -108,7 +108,7 @@ ionburst.get(id, function(err, data) {
 
 With async/await:
 
-```sh
+```javascript
 let data = await ionburst.getAsync(id);
 ```
 
@@ -116,7 +116,7 @@ let data = await ionburst.getAsync(id);
 
 With Callback:
 
-```sh
+```javascript
 ionburst.delete(id, function(err, data) {
   ...
 });
@@ -124,7 +124,7 @@ ionburst.delete(id, function(err, data) {
 
 With async/await:
 
-```sh
+```javascript
 let data = await ionburst.deleteAsync(id);
 ```
 
@@ -132,7 +132,7 @@ let data = await ionburst.deleteAsync(id);
 
 With Callback:
 
-```sh
+```javascript
 ionburst.startDeferredAction({
   action: 'PUT',
   id: '...',
@@ -145,7 +145,7 @@ ionburst.startDeferredAction({
 
 With async/await:
 
-```sh
+```javascript
 let token = await ionburst.startDeferredActionAsync({
   action: 'PUT',
   id: '...',
@@ -158,7 +158,7 @@ let token = await ionburst.startDeferredActionAsync({
 
 With Callback:
 
-```sh
+```javascript
 ionburst.startDeferredAction({
   action: 'GET',
   id: '...'
@@ -169,7 +169,7 @@ ionburst.startDeferredAction({
 
 With async/await:
 
-```sh
+```javascript
 let token = await ionburst.startDeferredActionAsync({
   action: 'GET',
   id: '...'
@@ -180,7 +180,7 @@ let token = await ionburst.startDeferredActionAsync({
 
 With Callback:
 
-```sh
+```javascript
 ionburst.checkDeferred(token, function(err, token) {
   ...
 });
@@ -189,7 +189,7 @@ ionburst.checkDeferred(token, function(err, token) {
 
 With async/await:
 
-```sh
+```javascript
 let result = await ionburst.checkDeferredAsync(token);
 ```
 
@@ -197,7 +197,7 @@ let result = await ionburst.checkDeferredAsync(token);
 
 With Callback:
 
-```sh
+```javascript
 ionburst.fetch(token, function(err, result) {
   ...
 });
@@ -205,7 +205,7 @@ ionburst.fetch(token, function(err, result) {
 
 With async/await:
 
-```sh
+```javascript
 let result = await ionburst.fetchAsync(token);
 ```
 
@@ -213,7 +213,7 @@ let result = await ionburst.fetchAsync(token);
 
 With Callback:
 
-```sh
+```javascript
 ionburst.getClassifications(function(err, data) {
   ...
 });
@@ -221,7 +221,7 @@ ionburst.getClassifications(function(err, data) {
 
 With async/await:
 
-```sh
+```javascript
 let data = await ionburst.getClassificationsAsync();
 ```
 
