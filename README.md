@@ -112,6 +112,25 @@ With async/await:
 let data = await ionburst.getAsync(id);
 ```
 
+#### Check Data
+
+With Callback:
+
+```javascript
+ionburst.head(id, function (err, headResponse) {
+    if (err) {
+        throw err;
+    } else if (headResponse.exists == true) {
+        console.log('Object successfully checked is', id, 'with length', headResponse.length);
+      }
+});
+```
+With async/await:
+
+```javascript
+let head = await ionburst.headAsync(id);
+```
+
 #### Delete Data
 
 With Callback:
@@ -230,7 +249,7 @@ let data = await ionburst.getClassificationsAsync();
 Please use the following community resources for support. We use [GitLab issues][sdk-issues] to track bugs and feature requests.
 
 * Join the Ionburst Cloud community on [Slack](https://join.slack.com/t/ionburst-cloud/shared_invite/zt-panjkslf-Z5DOpU1OOeNPkXgklD~Cpg)
-* Get in touch with [Ionburst Support](https://ionburst.cloud/contact)
+* Get in touch with [Ionburst Cloud Support](https://ionburst.cloud/contact)
 * If you have found a bug, please open an [issue][sdk-issues]
 
 ### Opening Issues
@@ -245,7 +264,7 @@ The changelog for the SDK can be found in the [CHANGELOG file.](CHANGELOG.md)
 
 ## Contributors
 
-A massive thanks to [Costin Botez](https://github.com/costibotez) for developing this SDK.
+A massive thanks to [Costin Botez](https://github.com/costibotez) for helping develop this SDK.
 
 ## Dependencies
 
