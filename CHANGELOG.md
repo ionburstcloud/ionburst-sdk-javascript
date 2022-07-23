@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 1.1.1
+2022-07-14
+
+### Fixes
+
+- package updates/tidy-up (2deee9bc0016b80b0d8d0fe6b93f623a7fecb6f7)
+
 ## 1.1.1-develop.1
 2022-03-23
 
