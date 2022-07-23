@@ -2,6 +2,18 @@
 
 <!--- next entry here -->
 
+## 1.2.0-develop.1
+2022-07-23
+
+### Features
+
+- add new HEAD method for Data and Secrets - 2c916045fcbfcdc1d041bd6928500d16d36189a (84b4f6dc4407186541cd5bd97a10df57a33198ea)
+
+### Fixes
+
+- package updates/tidy-up (5363de2fc9d9bd4f3d9adaa13b81aa9c3654fb4f)
+- initial head/headAsync implementation for S6/NKV (22c916045fcbfcdc1d041bd6928500d16d36189a)
+
 ## 1.1.1
 2022-07-14
 
